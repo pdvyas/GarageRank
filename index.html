@@ -8,8 +8,6 @@
 			}
 		</style>
 		<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
-		<script type="text/javascript" src="js/mustache.js"></script>
-		<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
 		<script type="text/javascript" src="js/global.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
 	</head>
@@ -24,44 +22,11 @@
 			</div>
 		</div>
 		<div class="container">
-			<form>
-				<input id="searchbox" class="span14 xlarge" size=30 style="height:28px"></input>
-				<a class="btn span1" id="searchbtn">Search</a>
-			</form>
+				<input id="searchbox" class="span11 xlarge" size=30 style="height:28px"></input>
+				<button class="btn span2" id="searchbtn">Search</button>
+				<button class="btn span3" id="unluckybtn">I'm never unlucky!</button>
 			<div id="searchResults">
-<!--
-				<table class="zebra-striped">
-
-					<thead>
-						<tr>
-							<th>#</th>
-							<th>Title</th>
-							<th>Rank</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>3</td>
-							<td>Free</td>
-							<td>4534</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>India</td>
-							<td>3234</td>
-						</tr>
-						<tr>
-							<td>1</td>
-							<td>Pune</td>
-							<td>123</td>
-						</tr>
-					</tbody>
-				</table>
--->
 			</div>
-			<script>
-				$('table').tablesorter()
-			</script>
 		</div>
 	</body>
 </html>
