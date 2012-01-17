@@ -16,5 +16,4 @@ Warning
 It actually doesn't do anything. Expand the extension options and click
 on "Inspect active views: background.html"
 
-Fire test() from the JavaScript console. This uploads all your history
-to my mongo !
+Click on the new extension logo and click on "Sync history with server"
