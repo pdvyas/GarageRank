@@ -10,6 +10,7 @@ Nopes, with GarageRank, you will be hosting this on your own cloud based server,
 
 What to look for ?
 ------------------
+* Encrypted storage of the history, just in case ... !
 * A Chrome extension we are buidling. FF will be next.
 * Searching your browsing history even if you have removed it from your browser.
 * Cool analytics that we will be able to collect, as your history data grows into days to weeks to months to years.
