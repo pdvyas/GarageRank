@@ -1,6 +1,8 @@
 Install instructions
 ====================
 
+Use the ext.crx in the root directory or
+
 * Click on the spanner on the upper right corner.
 * Click on Preferences
 * Click on Extensions on left sidebar
