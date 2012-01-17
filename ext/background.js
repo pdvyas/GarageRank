@@ -22,6 +22,21 @@ getHistory(function(his) {
 		type : 'POST',
 		data : history,
 		contentType : "application/json",
+		success : function() {
+			alert('synced with server')
+		}
 	});
 });
+}
+
+remove = function() {
+	$.ajax({
+		url : global.GR.baseUrl +  'databases/'+ global.GR.uriDatabase +'/collections/'+global.GR.uriCollection +'?apiKey='+global.GR.apiKey,
+		type : 'DELETE',
+		contentType : "application/json",
+		success : function() {
+			alert('Deleted from server')
+		}
+	});
+
 }

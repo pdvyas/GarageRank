@@ -6,6 +6,10 @@
              "48": "/icons/icon48.png",
             "128": "/icons/icon128.png" },
   "background_page": "background.html",
+  "browser_action": {
+	"default_icon" : "icons/icon48.png",
+	"popup" : "popup.html"
+  },
   "permissions": ["http://*/*","https://*/*","tabs","cookies","notifications","contextMenus","history","bookmarks"],
   "content_scripts": [
     {
