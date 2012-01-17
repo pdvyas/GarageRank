@@ -42,12 +42,15 @@ FAQs
 
 
 * Why I will put up my server ?
+------------------
 Because you are scared (rightfully!) that you privacy can be breached. If you put that on your own server your privacy will be in your own hand. 
 
 * But aren't setting up server a lot of hassle ? 
+------------------
 Depends on how you value your privacy. But, you will, most likely use the one-click installation scripts to put the things in place. We are working on it.
 
 * Will those server cost me ?
+------------------
 May be. It all depends where you set it up. For most of you out there, some services, like Aamazon Web Service, provide a free tier to experiment. It may suffice your needs.
 
 
