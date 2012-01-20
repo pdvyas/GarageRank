@@ -10,7 +10,7 @@ var queryCollection = function(keyword,callback) {
 		'url' : $.global.GR.baseUrl +  'databases/'+ $.global.GR.uriDatabase +'/collections/'+$.global.GR.uriCollection,
 		'data' : {
 			'apiKey' : $.global.GR.apiKey,
-			'q' : '{"kw":"'+keyword+'"}'
+			'q' : keyword
 		},
 		'success' : function(data,ts,xhr) {
 			data=JSON.parse(data)

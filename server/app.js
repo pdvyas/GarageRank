@@ -11,7 +11,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/databases/:database/collections/:collection',function(req,res) {
 	mongo.db(host+':'+port+'/'+req.params.database)
 	.collection(req.params.collection)
-	.find()
+	.find({kw:req.query['q']})
 	.toArray(function(err,items) {
 		if(err)
 		{
