@@ -4,7 +4,6 @@ var mongo = require('mongoskin');
 var request = require('request')
 var _ = require('underscore')
 var db = mongo.db('localhost/'+database)
-
 var getNonIndexedURLs = function(callback) {
 	db.collection(collection)
 	.find({kw:{$exists : false}})
@@ -27,7 +26,6 @@ var getBody = function(url,callback) {
 	request(url,function(error, response, body){
 		if(!error && response.statusCode == 200) {
 			callback(body);
-			console.log(body);
 		}
 		else
 		{
@@ -63,4 +61,4 @@ var doProcessURL = function() {
 	});
 }
 
-doProcessURL()
+setInterval(doProcessURL,30000)
