@@ -41,7 +41,7 @@ $.mk_table = function(data) {
 		var tr = $('<tr></tr>')
 		var td = $('<td></td>')
 		var a = $('<a></a>')
-		a.attr('href',res.uri)
+		a.attr('href',res.url)
 		a.append(res.title)
 		td.append(a)
 		tr.append(td)
