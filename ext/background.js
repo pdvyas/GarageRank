@@ -1,24 +1,30 @@
 
 var getHistory = function(cb) {
-	chrome.history.search({text:''},cb)
+	startTime = localstorage.getItem('last_sync')
+	if(startTime)
+	{
+		chrome.history.search({text:'',startTime:startTime},cb)
+	}
+	else
+	{
+		chrome.history.search({text:''},cb)
+	}
 }
 
 var global = {};
 global.GR = { 
-	baseUrl : 'https://api.mongolab.com/api/1/',
+	baseUrl : 'http://175.41.215.201:3000/',
 	apiKey : '4f103f24e4b04ac27016ba83',
 	provider : 'mongolab',
-	uriDatabase : 'pdtest',
+	uriDatabase : 'garage',
 	uriCollection : 'testuri'
 };
 
-var history;
 test = function () {
-getHistory(function(his) {
-	history = his;
+getHistory(function(history) {
 	history = JSON.stringify(history);
 	$.ajax({
-		url : global.GR.baseUrl +  'databases/'+ global.GR.uriDatabase +'/collections/'+global.GR.uriCollection +'?apiKey='+global.GR.apiKey,
+		url : global.GR.baseUrl +  'databases/'+ global.GR.uriDatabase +'/collections/'+global.GR.uriCollection,
 		type : 'POST',
 		data : history,
 		contentType : "application/json",
