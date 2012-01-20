@@ -1,9 +1,9 @@
 $(function() {
-	$$$ = chrome.extension.getBackgroundPage();
+	bgPage = chrome.extension.getBackgroundPage();
 	$('#test').on('click',function() {
-		$$$.test();
+		bgPage.test();
 	});
-	$('#click').on('click',function() {
-		$$$.remove();
+	$('#clear').on('click',function() {
+		bgPage.remove();
 	});
 });

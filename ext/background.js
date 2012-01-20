@@ -1,6 +1,7 @@
 
 var getHistory = function(cb) {
-	startTime = localstorage.getItem('last_sync')
+	var nowTime = Date.now()
+	var startTime = Number(localStorage.getItem('last_sync'))
 	if(startTime)
 	{
 		chrome.history.search({text:'',startTime:startTime},cb)
@@ -9,11 +10,12 @@ var getHistory = function(cb) {
 	{
 		chrome.history.search({text:''},cb)
 	}
+	localStorage.setItem('last_sync',nowTime)
 }
 
 var global = {};
 global.GR = { 
-	baseUrl : 'http://175.41.215.201:3000/',
+	baseUrl : 'http://localhost:3000/',
 	apiKey : '4f103f24e4b04ac27016ba83',
 	provider : 'mongolab',
 	uriDatabase : 'garage',
@@ -37,7 +39,7 @@ getHistory(function(history) {
 
 remove = function() {
 	$.ajax({
-		url : global.GR.baseUrl +  'databases/'+ global.GR.uriDatabase +'/collections/'+global.GR.uriCollection +'?apiKey='+global.GR.apiKey,
+		url : global.GR.baseUrl +  'databases/'+ global.GR.uriDatabase +'/collections/'+global.GR.uriCollection,
 		type : 'DELETE',
 		contentType : "application/json",
 		success : function() {
